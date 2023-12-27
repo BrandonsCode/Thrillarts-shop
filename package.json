@@ -7,19 +7,10 @@
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BrandonsCode/Thrillarts-shop.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BrandonsCode/Thrillarts-shop/issues"
-  },
-  "homepage": "https://github.com/BrandonsCode/Thrillarts-shop#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -27,7 +18,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.19",
     "morgan": "^1.10.0",
-    "multer": "^1.4.5-lts.1",
+    "multer": "^1.4.2",
     "nodemon": "^2.0.6"
   }
 }
