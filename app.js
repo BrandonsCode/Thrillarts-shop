@@ -47,7 +47,7 @@ mongoose.connect(process.env.CONNECTION_STRING, {
 //Server
 // app.listen(3000, ()=>{
 
-//     console.log('server is running http://localhost:3000');
+//     console.log('server is running http://10.1.10.21:3000');
 // })
 
 //Production
