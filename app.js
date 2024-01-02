@@ -19,17 +19,17 @@ app.use('/public/uploads', express.static(__dirname + '/public/uploads'));
 app.use(errorHandler);
 
 //Routes
-const categoriesRoutes = require('./routes/categories');
-const productsRoutes = require('./routes/products');
-const usersRoutes = require('./routes/users');
-const ordersRoutes = require('./routes/orders');
+const categoriesRouter = require('./routes/categories');
+const productsRouter = require('./routes/products');
+const usersRouter = require('./routes/users');
+const ordersRouter = require('./routes/orders');
 
 const api = process.env.API_URL;
 
-app.use(`${api}/categories`, categoriesRoutes);
-app.use(`${api}/products`, productsRoutes);
-app.use(`${api}/users`, usersRoutes);
-app.use(`${api}/orders`, ordersRoutes);
+app.use(`${api}/categories`, categoriesRouter);
+app.use(`${api}/products`, productsRouter);
+app.use(`${api}/users`, usersRouter);
+app.use(`${api}/orders`, ordersRouter);
 
 //Database
 mongoose.connect(process.env.CONNECTION_STRING, {
@@ -45,13 +45,13 @@ mongoose.connect(process.env.CONNECTION_STRING, {
 })
 
 //Server
-// app.listen(3000, ()=>{
+app.listen(3000, ()=>{
 
-//     console.log('server is running http://10.1.10.21:3000');
-// })
+    console.log('server is running http://10.1.10.21:3000');
+})
 
 //Production
-var server = app.listen(process.env.PORT || 3000, function () {
-  var port = server.address().port;
-  console.log("Express is working on port " + port)
-})
+// var server = app.listen(process.env.PORT || 3000, function () {
+//   var port = server.address().port;
+//   console.log("Express is working on port " + port)
+// })
